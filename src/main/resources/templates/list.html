@@ -25,18 +25,18 @@
         <tr th:each="product : ${products}" th:object="${product}">
             <td th:text="*{code}"></td>
             <td th:text="*{name}"></td>
-            <td th:text="*{price} + ' $'"></td>
+            <td th:text="|*{price}  '$' |"></td>
             <td th:text="*{quantity}"></td>
-            <td class="center" th:if="*{image}  != null">
+            <td class="center" th:if="*{image != null}">
                 <img th:alt="*{image}" th:src="@{'/images/'+*{image}}">
             </td>
-            <td th:p class="center" th:unless="*{image}  != null">
+            <td th:p class="center" th:unless="*{image != null}">
                 <img alt="no-image.png" th:src="@{/images/no-image.png}">
             </td>
             <td >
                 <div class="actions">
                     <a class="button gray-button" th:href="@{'/products/'+*{id}+'/edit'}">update</a>
-                    <form onsubmit="return confirmDelete(event)" th:action="@{'/products/'+*{id}+'/delete'}" method="post">
+                    <form onsubmit="return confirmDelete()" th:action="@{'/products/'+*{id}+'/delete'}" method="post">
                         <input class="button gray-button" type="submit" value="delete">
                     </form>
                 </div>

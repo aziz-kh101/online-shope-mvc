@@ -18,7 +18,7 @@ public class ProductDto {
     @Pattern(regexp = "\\d+(?:\\.\\d+)?",message = "should be float")
     private String price;
     @NotNull
-    @Pattern(regexp = "\\d+",message = "should be float")
+    @Pattern(regexp = "\\d+",message = "should be number")
     @Min(1)
     private String quantity;
 

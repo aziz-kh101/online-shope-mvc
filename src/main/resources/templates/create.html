@@ -18,7 +18,7 @@
         <label for="code"> Code :  </label>
         <input id="code" type="text" placeholder="code" th:field="*{code}" />
         <span class="error" th:if="${#fields.hasErrors('code')}" th:errors="*{code}"></span>
-        <span th:unless="${#fields.hasErrors('name')}"></span>
+        <span th:unless="${#fields.hasErrors('code')}"></span>
 
         <label for="name"> Name :  </label>
         <input id="name" type="text" placeholder="name" th:field="*{name}" />
@@ -28,17 +28,17 @@
         <label for="price"> Price :  </label>
         <input id="price" type="text" placeholder="price" th:field="*{price}" />
         <span class="error" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span>
-        <span th:unless="${#fields.hasErrors('name')}"></span>
+        <span th:unless="${#fields.hasErrors('price')}"></span>
 
         <label for="quantity"> Quantity :  </label>
         <input id="quantity" type="text" placeholder="quantity" th:field="*{quantity}" />
         <span class="error" th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}"></span>
-        <span th:unless="${#fields.hasErrors('name')}"></span>
+        <span th:unless="${#fields.hasErrors('quantity')}"></span>
 
-        <label for="image"> Quantity :  </label>
+        <label for="image"> Image :  </label>
         <input id="image" type="text" placeholder="image" disabled/>
         <span class="error" th:if="${#fields.hasErrors('image')}" th:errors="*{image}" ></span>
-        <span th:unless="${#fields.hasErrors('name')}"></span>
+        <span th:unless="${#fields.hasErrors('image')}"></span>
 
         <input class="button gray-button" type="submit" value="create">
     </form>
