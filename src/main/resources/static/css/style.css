@@ -1,0 +1,103 @@
+body{
+    background: #f2f2f2;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    width: 150px;
+}
+
+.title{
+    text-align: center;
+    color: #4609b9;
+}
+
+.available{
+    color: greenyellow;
+}
+
+.unavailable{
+    color: red;
+}
+
+.table-header{
+    background: #c5acd5;
+}
+
+.table-header > th{
+    padding: 5px;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+}
+
+td.center {
+    text-align: center;
+}
+
+td{
+    padding: 5px;
+}
+
+table img{
+    max-width: 50px;
+}
+
+table,tr,td,th{
+    border: #ddd solid 1px;
+    border-collapse: collapse;
+}
+
+.product-form{
+    display: grid;
+    grid-template-columns: fit-content(300px) fit-content(300px)  fit-content(300px) ;
+    align-items: start;
+    gap: 10px;
+}
+
+.product-form label{
+    font-weight: bold;
+}
+
+.product-form .error{
+    color: red;
+}
+
+.button {
+    display: block;
+    width: fit-content;
+    border: none;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.gray-button{
+    background: dimgray;
+    color: white;
+}
+
+.violet-button{
+    background: #8151b8;
+    color: white;
+    margin: 10px 0;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.product-form input[type=submit]:active{
+    background: rgba(105, 105, 105, 0.4);
+}
+
+.page-title{
+    color: #8151b8;
+}
